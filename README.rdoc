@@ -2,7 +2,7 @@
 
 This application uses the New York Times API to collect the latest news items.
 A cron job is set up using the 'whenever' gem, it runs
-  'rake newswire:collect'
+  rake newswire:collect
 every 20 minutes.
 
 The captured news items are represented in the following Rails models:
@@ -18,10 +18,10 @@ implementation of Support Vector Machines).
 The Ruby interface for the LIBSVM C++ library is available here:
   http://github.com/tomz/libsvm-ruby-swig/tree/master
 
-The power of _Convention over Configuration_ is demonstrated here, there are less
+The power of <b>Convention over Configuration</b> is demonstrated here, there are less
 than 80 lines of Ruby code in lib/task/newswire.rake including the setup code and
-comments and blank lines.  To achieve the same in _Java_ would require code that is
-_mind-boggling and ugly_.
+comments and blank lines.  To achieve the same in <b>Java</b> would require code that is
+<b>mind-boggling</b> and <b>ugly</b>.
 
 == Installation
 
@@ -32,24 +32,27 @@ _mind-boggling and ugly_.
 - install the required gem(s):
     sudo gem install json
 - modify database.yml for your db environment
-- run rake db:create && rake db:migrate
+- create the database and tables:
+    rake db:create && rake db:migrate
 - install the 'whenever' gem:
-    gem sources -a http://gems.github.com  #only if you haven't run it before  
+    gem sources -a http://gems.github.com  #only if you haven't run this before  
     sudo gem install javan-whenever
 - run whenever in the rails app directory:
     whenever
-- modify lib/task/newswire.rake to use your NYTimes API key
-- the newswire:collect will run every 20 minutes to grab the latest NYTime
+- modify lib/task/newswire.rake to put in your NYTimes Newswire API key
+- the newswire:collect task will run every 20 minutes to grab the latest NYTimes
   news, you can change the time interval in config/schedule.rb:
     every 20.minutes do
       rake "newswire:collect", :environment => "development"
     end
 - and you can optionally run 'rake newswire:test' to test without the API key
-- relax and watch your database tables get filled up with New York Times news items
+- now relax and watch your tables get filled up with New York Times news items
 
 == Author
 
 Tom Zeng
-http://www.tomzconsulting.com
-http://www.linkedin.com/in/tomzeng
+
+http://www.tomzconsulting.com 
+http://www.linkedin.com/in/tomzeng 
 tom.z.zeng _at_ gmail _dot_ com
+
