@@ -32,19 +32,19 @@ def save_news_items json_data, log_file = 'log/collect.log'
     if not NewsItem.exists? n["id"]
       media_items = n["media"]
       related_urls = n["related_urls"]
-      n.delete "media"         # delete from n to make 'NewsItems.new n' work
+      n.delete "media"  # delete from n to make 'NewsItems.new n' work
       n.delete "related_urls"  # save as above
-      news_item = NewsItem.new n
-      news_item.id = n["id"] # id needs to be forced, it's not standard integer
+      news_item = NewsItem.new n  # magic
+      news_item.id = n["id"]  # id needs to be forced, it's not standard integer
       news_item.related_urls =  related_urls.collect {|url|
-        RelatedUrl.new url
+        RelatedUrl.new url  # magic
       }
       news_item.media_items = media_items.collect{|m|
         media_metadata_items = m["media-metadata"]
         m.delete "media-metadata"  # delete from m to make MediaItem.new m work
         media_item = MediaItem.new m
         media_item.media_metadata_items = media_metadata_items.collect{|mi|
-          mm = MediaMetadataItem.new mi
+          MediaMetadataItem.new mi  # magic
         }
         media_item
       }
