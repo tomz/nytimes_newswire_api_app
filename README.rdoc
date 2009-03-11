@@ -52,6 +52,8 @@ both _mind_-_boggling_ and _ugly_.
   to test without the API key
 - now relax and watch your tables get filled up with New York Times news items:
     tail -100f log/collect.log
+- to clear up the collected items, run:
+    rake newswire:empty_all_tables
 
 == Author
 
