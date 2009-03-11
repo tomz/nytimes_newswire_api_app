@@ -22,7 +22,7 @@ The <b>Ruby interface for the LIBSVM C++ library</b> is available at:
 The power of <b>Convention over Configuration</b> is demonstrated here, there are less
 than 80 lines of <b>Ruby</b> code in lib/task/newswire.rake including the setup code,
 comments, and blank lines.  To achieve the same in <b>Java</b> would require code that is
-both _mind-boggling_ and _ugly_.
+both _mind_-_boggling_ and _ugly_.
 
 == Installation
 
@@ -48,7 +48,7 @@ both _mind-boggling_ and _ugly_.
       rake "newswire:collect", :environment => "development"
     end
 - and you can optionally run:
-    rake newswire:test'
+    rake newswire:test
   to test without the API key
 - now relax and watch your tables get filled up with New York Times news items
 
