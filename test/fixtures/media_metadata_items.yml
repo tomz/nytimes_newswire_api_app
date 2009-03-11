@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  media_item_id: 1
+  format: MyString
+  height: MyString
+  width: MyString
+  url: MyString
+
+two:
+  media_item_id: 1
+  format: MyString
+  height: MyString
+  width: MyString
+  url: MyString

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  news_item_id: MyString
+  suggested_link_text: MyString
+  url: MyString
+
+two:
+  news_item_id: MyString
+  suggested_link_text: MyString
+  url: MyString

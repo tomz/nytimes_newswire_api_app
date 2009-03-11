@@ -1,0 +1,49 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  section: MyString
+  subsection: MyString
+  headline: MyString
+  summary: MyString
+  url: MyString
+  byline: MyString
+  platform: MyString
+  id: 1
+  source: MyString
+  updated: 2009-03-09 00:01:56
+  created: 2009-03-09 00:01:56
+  pubdate: 2009-03-09
+  subtype: MyString
+  kicker: MyString
+  subheadline: MyString
+  terms: MyString
+  organizations: MyString
+  people: MyString
+  locations: MyString
+  indexing_terms: MyString
+  related_urls: MyString
+  categories_tags: MyString
+
+two:
+  section: MyString
+  subsection: MyString
+  headline: MyString
+  summary: MyString
+  url: MyString
+  byline: MyString
+  platform: MyString
+  id: 1
+  source: MyString
+  updated: 2009-03-09 00:01:56
+  created: 2009-03-09 00:01:56
+  pubdate: 2009-03-09
+  subtype: MyString
+  kicker: MyString
+  subheadline: MyString
+  terms: MyString
+  organizations: MyString
+  people: MyString
+  locations: MyString
+  indexing_terms: MyString
+  related_urls: MyString
+  categories_tags: MyString
