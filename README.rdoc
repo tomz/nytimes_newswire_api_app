@@ -22,7 +22,7 @@ The <b>Ruby interface for the LIBSVM C++ library</b> is available at:
 The power of <b>Convention over Configuration</b> is demonstrated here, there are less
 than 80 lines of <b>Ruby</b> code in lib/task/newswire.rake including the setup code,
 comments, and blank lines.  To achieve the same in <b>Java</b> would require code that is
-both <b>mind-boggling</b> and <b>ugly</b>.
+both _mind-boggling_ and _ugly_.
 
 == Installation
 
