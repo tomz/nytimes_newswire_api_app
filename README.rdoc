@@ -2,7 +2,7 @@
 
 This application uses the New York Times API to collect the latest news items.
 A cron job is set up using the 'whenever' gem, it runs
-- 'rake newswire:collect'
+  'rake newswire:collect'
 every 20 minutes.
 
 The captured news items are represented in the following Rails models:
@@ -16,28 +16,28 @@ models for machine learning/text mining tools like LIBSVM (the most popular C++
 implementation of Support Vector Machines).
 
 The Ruby interface for the LIBSVM C++ library is available here:
-- http://github.com/tomz/libsvm-ruby-swig/tree/master
+  http://github.com/tomz/libsvm-ruby-swig/tree/master
 
-The power of "Convention over Configuration" is demonstrated here, there are less
+The power of _Convention over Configuration_ is demonstrated here, there are less
 than 80 lines of Ruby code in lib/task/newswire.rake including the setup code and
-comments and blank lines.  To achieve the same in Java would require code that is
-mind-boggling and ugly.
+comments and blank lines.  To achieve the same in _Java_ would require code that is
+_mind-boggling and ugly_.
 
 == Installation
 
 - apply for an API key from NYTimes Developer Network site at:
-  http://developer.nytimes.com/docs/times_newswire_api/
+    http://developer.nytimes.com/docs/times_newswire_api/
 - get the code from github:
-  git clone git://github.com/tomz/nytimes_newswire_api_app.git 
+    git clone git://github.com/tomz/nytimes_newswire_api_app.git 
 - install the required gem(s):
-  sudo gem install json
+    sudo gem install json
 - modify database.yml for your db environment
 - run rake db:create && rake db:migrate
 - install the 'whenever' gem:
-  gem sources -a http://gems.github.com  #only if you haven't run it before
-  sudo gem install javan-whenever
+    gem sources -a http://gems.github.com  #only if you haven't run it before  
+    sudo gem install javan-whenever
 - run whenever in the rails app directory:
-  whenever
+    whenever
 - modify lib/task/newswire.rake to use your NYTimes API key
 - the newswire:collect will run every 20 minutes to grab the latest NYTime
   news, you can change the time interval in config/schedule.rb:
