@@ -1,7 +1,8 @@
 = A Rails App to collect New York Times news items
 
 This application uses <b>the New York Times Newswire API</b> to collect the latest news items.
-A cron job is set up using the 'whenever' gem, it runs
+
+A cron job is set up using the 'whenever' gem, it runs:
   rake newswire:collect
 every 20 minutes.
 
@@ -25,7 +26,8 @@ both <b>mind-boggling</b> and <b>ugly</b>.
 
 == Installation
 
-- apply for an API key from NYTimes Developer Network site at:
+
+- apply for an API key from the NYTimes Developer Network site at:
     http://developer.nytimes.com/docs/times_newswire_api/
 - get the code from github:
     git clone git://github.com/tomz/nytimes_newswire_api_app.git 
@@ -34,12 +36,12 @@ both <b>mind-boggling</b> and <b>ugly</b>.
 - modify database.yml for your db environment
 - create the database and tables:
     rake db:create && rake db:migrate
+- modify lib/task/newswire.rake to put in your NYTimes Newswire API key
 - install the 'whenever' gem:
     gem sources -a http://gems.github.com  #only if you haven't run this before  
     sudo gem install javan-whenever
 - run whenever in the rails app directory:
     whenever
-- modify lib/task/newswire.rake to put in your NYTimes Newswire API key
 - the newswire:collect task will run every 20 minutes to grab the latest NYTimes
   news, you can change the time interval in config/schedule.rb:
     every 20.minutes do
