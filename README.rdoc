@@ -16,7 +16,7 @@ One potential use of pre-categorized texts is as training data for building
 models for machine learning/text mining tools like LIBSVM (the most popular C++
 implementation of Support Vector Machines).
 
-The <b>Ruby interface for the LIBSVM C++ library</b> is available at:
+The <b>Ruby interface to the LIBSVM C++ library</b> is available at:
   http://github.com/tomz/libsvm-ruby-swig/tree/master
 
 The power of <b>Convention over Configuration</b> is demonstrated here, there are less
