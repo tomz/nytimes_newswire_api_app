@@ -51,6 +51,7 @@ both _mind_-_boggling_ and _ugly_.
     rake newswire:test
   to test without the API key
 - and for integration test, run:
+    rake RAILS_ENV=test db:create && rake RAILS_ENV=test db:migrate
     cucumber features -n
 - now relax and watch your tables get filled up with New York Times news items:
     tail -100f log/collect.log
