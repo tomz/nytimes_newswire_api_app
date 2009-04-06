@@ -50,6 +50,8 @@ both _mind_-_boggling_ and _ugly_.
 - and you can optionally run:
     rake newswire:test
   to test without the API key
+- and for integration test, run:
+    cucumber features -n
 - now relax and watch your tables get filled up with New York Times news items:
     tail -100f log/collect.log
 - to clear up the collected items, run:
