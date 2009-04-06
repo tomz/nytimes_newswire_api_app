@@ -1,0 +1,60 @@
+<h1>Listing news_items</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Section</th>
+    <th>Subsection</th>
+    <th>Headline</th>
+    <th>Summary</th>
+    <th>Url</th>
+    <th>Byline</th>
+    <th>Platform</th>
+    <th>Source</th>
+    <th>Created</th>
+    <th>Pubdate</th>
+    <th>Subtype</th>
+    <th>Kicker</th>
+    <th>Subheadline</th>
+    <th>Terms</th>
+    <th>Organizations</th>
+    <th>People</th>
+    <th>Locations</th>
+    <th>Indexing terms</th>
+    <th>Categories tags</th>
+    <th>Created at</th>
+  </tr>
+
+<% @news_items.each do |news_item| %>
+  <tr>
+    <td><%=h news_item.id %></td>
+    <td><%=h news_item.section %></td>
+    <td><%=h news_item.subsection %></td>
+    <td><%=h news_item.headline %></td>
+    <td><%=h news_item.summary %></td>
+    <td><%=h news_item.url %></td>
+    <td><%=h news_item.byline %></td>
+    <td><%=h news_item.platform %></td>
+    <td><%=h news_item.source %></td>
+    <td><%=h news_item.created %></td>
+    <td><%=h news_item.pubdate %></td>
+    <td><%=h news_item.subtype %></td>
+    <td><%=h news_item.kicker %></td>
+    <td><%=h news_item.subheadline %></td>
+    <td><%=h news_item.terms %></td>
+    <td><%=h news_item.organizations %></td>
+    <td><%=h news_item.people %></td>
+    <td><%=h news_item.locations %></td>
+    <td><%=h news_item.indexing_terms %></td>
+    <td><%=h news_item.categories_tags %></td>
+    <td><%=h news_item.created_at %></td>
+    <td><%= link_to 'Show', news_item %></td>
+    <td><%= link_to 'Edit', edit_news_item_path(news_item) %></td>
+    <td><%= link_to 'Destroy', news_item, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New news_item', new_news_item_path %>

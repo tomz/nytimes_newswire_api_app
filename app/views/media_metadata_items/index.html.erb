@@ -1,0 +1,32 @@
+<h1>Listing media_metadata_items</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Media item</th>
+    <th>Format</th>
+    <th>Height</th>
+    <th>Width</th>
+    <th>Url</th>
+    <th>Created at</th>
+  </tr>
+
+<% @media_metadata_items.each do |media_metadata_item| %>
+  <tr>
+    <td><%=h media_metadata_item.id %></td>
+    <td><%=h media_metadata_item.media_item_id %></td>
+    <td><%=h media_metadata_item.format %></td>
+    <td><%=h media_metadata_item.height %></td>
+    <td><%=h media_metadata_item.width %></td>
+    <td><%=h media_metadata_item.url %></td>
+    <td><%=h media_metadata_item.created_at %></td>
+    <td><%= link_to 'Show', media_metadata_item %></td>
+    <td><%= link_to 'Edit', edit_media_metadata_item_path(media_metadata_item) %></td>
+    <td><%= link_to 'Destroy', media_metadata_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New media_metadata_item', new_media_metadata_item_path %>

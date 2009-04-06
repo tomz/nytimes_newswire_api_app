@@ -1,0 +1,32 @@
+<h1>Listing media_items</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>News item</th>
+    <th>Type</th>
+    <th>Subtype</th>
+    <th>Caption</th>
+    <th>Copyright</th>
+    <th>Created at</th>
+  </tr>
+
+<% @media_items.each do |media_item| %>
+  <tr>
+    <td><%=h media_item.id %></td>
+    <td><%=h media_item.news_item_id %></td>
+    <td><%=h media_item.type %></td>
+    <td><%=h media_item.subtype %></td>
+    <td><%=h media_item.caption %></td>
+    <td><%=h media_item.copyright %></td>
+    <td><%=h media_item.created_at %></td>
+    <td><%= link_to 'Show', media_item %></td>
+    <td><%= link_to 'Edit', edit_media_item_path(media_item) %></td>
+    <td><%= link_to 'Destroy', media_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New media_items', new_media_item_path %>

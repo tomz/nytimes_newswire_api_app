@@ -1,0 +1,40 @@
+<h1>Editing media_metadata_item</h1>
+
+<% form_for(@media_metadata_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :media_item_id %><br />
+    <%= f.text_field :media_item_id %>
+  </p>
+  <p>
+    <%= f.label :format %><br />
+    <%= f.text_field :format %>
+  </p>
+  <p>
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :width %><br />
+    <%= f.text_field :width %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @media_metadata_item %> |
+<%= link_to 'Back', media_metadata_item_path %>

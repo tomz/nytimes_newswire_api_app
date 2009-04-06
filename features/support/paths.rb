@@ -9,6 +9,9 @@ module NavigationHelpers
     when /the index page/
       news_items_path
     
+    when /the news items XML url/
+      news_items_path+'.xml'
+
     else
       raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
         "Now, go and add a mapping in features/support/paths.rb"

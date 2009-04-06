@@ -1,0 +1,40 @@
+<h1>Editing media_item</h1>
+
+<% form_for(@media_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :news_item_id %><br />
+    <%= f.text_field :news_item_id %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :subtype %><br />
+    <%= f.text_field :subtype %>
+  </p>
+  <p>
+    <%= f.label :caption %><br />
+    <%= f.text_field :caption %>
+  </p>
+  <p>
+    <%= f.label :copyright %><br />
+    <%= f.text_field :copyright %>
+  </p>
+  <p>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @media_item %> |
+<%= link_to 'Back', media_items_path %>

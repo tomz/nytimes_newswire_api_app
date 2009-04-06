@@ -1,0 +1,38 @@
+<p>
+  <b>Id:</b>
+  <%=h @media_item.id %>
+</p>
+
+<p>
+  <b>News item:</b>
+  <%=h @media_item.news_item_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @media_item.type %>
+</p>
+
+<p>
+  <b>Subtype:</b>
+  <%=h @media_item.subtype %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%=h @media_item.caption %>
+</p>
+
+<p>
+  <b>Copyright:</b>
+  <%=h @media_item.copyright %>
+</p>
+
+<p>
+  <b>Created at:</b>
+  <%=h @media_item.created_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_media_item_path(@media_item) %> |
+<%= link_to 'Back', media_items_path %>

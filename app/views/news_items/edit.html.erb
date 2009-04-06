@@ -1,0 +1,96 @@
+<h1>Editing news_item</h1>
+
+<% form_for(@news_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </p>
+  <p>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
+  </p>
+  <p>
+    <%= f.label :subsection %><br />
+    <%= f.text_field :subsection %>
+  </p>
+  <p>
+    <%= f.label :headline %><br />
+    <%= f.text_field :headline %>
+  </p>
+  <p>
+    <%= f.label :summary %><br />
+    <%= f.text_field :summary %>
+  </p>
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :byline %><br />
+    <%= f.text_field :byline %>
+  </p>
+  <p>
+    <%= f.label :platform %><br />
+    <%= f.text_field :platform %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :created %><br />
+    <%= f.datetime_select :created %>
+  </p>
+  <p>
+    <%= f.label :pubdate %><br />
+    <%= f.date_select :pubdate %>
+  </p>
+  <p>
+    <%= f.label :subtype %><br />
+    <%= f.text_field :subtype %>
+  </p>
+  <p>
+    <%= f.label :kicker %><br />
+    <%= f.text_field :kicker %>
+  </p>
+  <p>
+    <%= f.label :subheadline %><br />
+    <%= f.text_field :subheadline %>
+  </p>
+  <p>
+    <%= f.label :terms %><br />
+    <%= f.text_field :terms %>
+  </p>
+  <p>
+    <%= f.label :organizations %><br />
+    <%= f.text_field :organizations %>
+  </p>
+  <p>
+    <%= f.label :people %><br />
+    <%= f.text_field :people %>
+  </p>
+  <p>
+    <%= f.label :locations %><br />
+    <%= f.text_field :locations %>
+  </p>
+  <p>
+    <%= f.label :indexing_terms %><br />
+    <%= f.text_field :indexing_terms %>
+  </p>
+  <p>
+    <%= f.label :categories_tags %><br />
+    <%= f.text_field :categories_tags %>
+  </p>
+  <p>
+    <%= f.label :created_at %><br />
+    <%= f.datetime_select :created_at %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @news_item %> |
+<%= link_to 'Back', news_items_path %>
