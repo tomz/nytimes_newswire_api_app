@@ -38,7 +38,7 @@ def save_news_items json_data, log_file = 'log/collect.log'
       news_item.id = n["id"]  # id needs to be forced, it's not standard integer
       news_item.related_urls =  related_urls.collect {|url|
         RelatedUrl.new url  # magic
-      }
+      } if !related_urls.nil?
       news_item.media_items = media_items.collect{|m|
         media_metadata_items = m["media-metadata"]
         m.delete "media-metadata"  # delete from m to make MediaItem.new m work
@@ -47,7 +47,7 @@ def save_news_items json_data, log_file = 'log/collect.log'
           MediaMetadataItem.new mi  # magic
         }
         media_item
-      }
+      } if !media_items.nil?
       news_item.save
       log.info "  news_item item saved: " + news_item.id.to_s      
     else
@@ -58,7 +58,7 @@ def save_news_items json_data, log_file = 'log/collect.log'
 end
 
 def collect
-  api_key = "put your Newswire API key here"
+  api_key = "9a9df348aca506deb8b51a25807e5426:7:58023070"
   limit = 20
   format = "json"  # coule be json or xml
   url = "http://api.nytimes.com/svc/news/v2/all/recent.#{format}?api-key=#{api_key}&limit=#{limit.to_s}"
