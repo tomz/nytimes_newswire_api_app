@@ -58,7 +58,7 @@ def save_news_items json_data, log_file = 'log/collect.log'
 end
 
 def collect
-  api_key = "9a9df348aca506deb8b51a25807e5426:7:58023070"
+  api_key = "your Newswire API key"
   limit = 20
   format = "json"  # coule be json or xml
   url = "http://api.nytimes.com/svc/news/v2/all/recent.#{format}?api-key=#{api_key}&limit=#{limit.to_s}"
